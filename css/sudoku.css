@@ -1,0 +1,183 @@
+
+input[type=number] {
+	font: 120% sans-serif;
+	width:60;
+	height:30;
+	margin-left:6;
+	margin-top:6;
+	text-align:center;
+	border:2px solid;
+	background-color:#A9E7BE;
+}
+
+input[type=text] {
+	font: 120% sans-serif;
+	width:30;
+	height:30;
+	margin-left:6;
+	margin-top:6;
+	text-align:center;
+	border:2px solid;
+	/*background-color:yellow;*/
+	background-color:#A9E7BE;
+
+}
+
+input[type=hor] {
+	font: 120% sans-serif;
+	width:40;
+	height:30;
+	/*margin-left:1;*/
+	margin-top:6;
+	text-align:center;
+	border:2px solid;
+	background-color:#DDD;
+}
+
+input[type=hor1] {
+	font: 100% sans-serif;
+	width:100;
+	height:30;
+	/*margin-left:1;*/
+	margin-top:6;
+	text-align:center;
+	border:2px solid;
+	background-color:#DDD;
+}
+
+input[type=posibles] {
+	font: 120% sans-serif;
+	width:150;
+	height:30;
+	margin-left:6;
+	margin-top:6;
+	text-align:left;
+	border:2px solid;
+	background-color:#A9E7BE;
+}
+
+#vertical-bar {
+	position: relative;
+    border-left: 1px solid #ccc;
+	margin-left:6px;
+	margin-top:6px;
+    width:3px;
+    height:30px;
+ }
+
+.separador{
+	background-color:#E9E6E9;
+	border:0px; 	
+}
+
+.boton {
+	position: relative;
+	float:left;
+	top:8px;
+	left:20px;
+	margin-right: 5px;
+	background-color:#86CA65;
+	color: black;
+	font: 125% sans-serif;
+	width: 260px;
+}
+
+.boton1 {
+	position: relative;
+	float:left;
+	top:8px;
+	left:50px;
+	margin-right: 5px;
+	background-color:#86CA65;
+	color: black;
+	font: 100% sans-serif;
+	width: 100px;
+}
+.boton:hover:enabled{
+/*.boton:hover {*/
+    /*background: red;*/
+    /*background: crimson;*/
+    color: blue;
+}
+
+#div_sudoku {
+	position: relative;
+	top: 13px;
+	left: 50px;
+	height:366px;
+	width:407px;
+	background-color:#E9E6E9;
+	border:15px solid;
+}	
+
+#cosa {
+	position: relative;
+	/*position: absolute;*/
+	top: 10px;
+	left:50px;
+	width:630px;
+	border:2px solid;
+}
+
+#botones {
+	position:fixed;  
+	top: 44px;
+	left:500px;
+	width:300px;
+	height:305px;
+	border:4px solid;
+	background-color:#D2D1D2;
+}
+
+#reloj {
+	font-size: 120%;
+	width:100px;
+	background-color:#A9E7BE;
+	border:4px solid;	
+}
+
+#crono {
+	position:  fixed;  
+	top: 357px;
+	left:500px;
+	width:300px;
+	height:75px;
+	border:4px solid;
+	background-color:#D2D1D2;
+}
+
+
+#comen {
+	font-size: 120%;
+	width:630px;
+	/*background-color:#b6ff00;*/
+	border:0px solid;	
+}
+
+#mod {
+	font-size: 100%;
+}
+
+
+label {
+	text-align:right;
+	margin-right:5px;
+	margin-left:5px;
+	font-size: 130%;
+	color: black;
+}
+
+#dat_ini title {
+	font-size: 15px;
+	padding: 0,5em;
+}
+	
+#ini {
+	margin-left: 100px;
+}
+
+.ui-dialog {
+background: #D2D1D2; //#b6ff00;
+}
+
+

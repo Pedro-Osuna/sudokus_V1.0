@@ -1,0 +1,168 @@
+<!--
+importante
+debemos colocar la carpeta images dentro de la carpeta de css
+-->
+
+<!--<!DOCTYPE html>-->
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">-->
+
+<html>
+     <head>
+        <meta charset="utf-8">
+        <title>Soluciona tu Sudoku </title>
+        <link href="./css/jquery-ui.css" type="text/css" rel="stylesheet" >
+        <link href="./css/sudoku.css" type="text/css" rel="stylesheet" >
+        <script src="./jquery/jquery-3.5.1.js"></script>
+        <script src="./jquery/jquery-ui.js"></script>
+        <script src="./js/teclas.js" type="text/javaScript"></script>
+        <script src="./js/algoritmos.js" type="text/javaScript"></script>
+        <script src="./js/incoherencias.js" type="text/javaScript"></script>
+        <script type="text/javaScript"></script>
+    </head>
+<body>
+        <text id="reloj" rows="1" cols="10" name="num_posi" readonly ></text><br>
+        <form id="entradas" action="" method="post">
+            <div id="div_sudoku">
+            <form>
+                <input type="text" maxlength="1" id="0"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="1"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="2"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="3"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="4"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="5"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="6"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="7"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="8"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="9"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="10"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="11"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="12"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="13"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="14"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="15"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="16"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="17"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="18"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="19"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="20"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="21"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="22"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="23"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="24"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="25"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="26"  onkeyup="test(event,id)">
+                <hr>
+                <input type="text" maxlength="1" id="27"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="28"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="29"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="30"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="31"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="32"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">
+                <input type="text" maxlength="1" id="33"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="34"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="35"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="36"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="37"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="38"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="39"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="40"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="41"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="42"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="43"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="44"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="45"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="46"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="47"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="48"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="49"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="50"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="51"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="52"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="53"  onkeyup="test(event,id)">
+                <hr>
+                <input type="text" maxlength="1" id="54"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="55"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="56"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">               
+                <input type="text" maxlength="1" id="57"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="58"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="59"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">               
+                <input type="text" maxlength="1" id="60"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="61"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="62"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="63"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="64"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="65"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="66"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="67"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="68"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="69"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="70"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="71"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="72"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="73"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="74"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="75"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="76"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="77"  onkeyup="test(event,id)">
+                <input type="submit" class="separador" value=" " disabled="yes">                
+                <input type="text" maxlength="1" id="78"  onkeyup="test(event,id)">
+                <input type="text" maxlength="1" id="79"  onkeyup="test(event,id)">  
+                <input type="text" maxlength="1" id="80"  onkeyup="test(event,id)">
+            </form>
+            </div>
+            <div id="cosa">
+                <label><u>Que está, o ha pasado:</u><br></label>
+                <textarea id="comen" name="comentarios" rows="4" cols="90" disabled > </textarea>
+                <div id="dat_ini" title="Celdas iniciales">
+                    <textarea id="mod" rows="4" cols="40" disabled > </textarea>
+                    <center><label><u>mínimo 20 máximo 40</u></label></center>
+                    <input id = "ini" type="number" name="celdas_iniciales" min="20" max="40" step="1" value=24>
+                </div>
+                <center><label><u>Números posibles de la celda activa :</u></label></center>
+                <center><input type="posibles" id="posi" name="num_posi" size="25" readonly></center>
+            </div>
+            <div id="botones">
+                <input type="submit" id = "inicio" class="boton" name="inicio" value="Nuevo" 
+                onclick="poner_a_inicio()"/>
+                <input type="submit" id = "entrar" class="boton" name="entrar" value="Introducir a mano" onclick="sudoku_a_mano()"/>
+                
+                <input type="submit" id = "generar" class="boton" name="generar" value="Generar aleatorio"/>
+                
+                <input type="submit" id="celda_ale" class="boton" name="celda" value="Ayuda en celda aleatoria" disabled="true" onclick="ayuda()"/>
+                <input type="submit" id="celda_act" class="boton" name="celda_activa" value="Ayuda en celda activa" disabled="true" onclick="ayuda_celda_activa()"/>
+                <input type="submit" id = "compruebo_celdas" class="boton" name= "comp_celdas" value="Verificar Celdas Iniciales" disabled="true" onclick="comprobar_celdas_iniciales()"/> 
+                <input type="submit" id = "compruebo_sudoku" class="boton" name= "comp_sudoku" value="Verificar errores" disabled="true" onclick="verificar_sudoku()"/> 
+                <input type="submit" id = "resuelvo"  class="boton" name= "resolver" value="Resolver" disabled="true" onclick="resolver_sudoku()"/>
+            </div>
+            <div id="crono">
+                <label><u>Tiempo</u></label>
+                <input type="hor" maxlength="2" id="horas" readonly >
+                <label> : </label>
+                <input type="hor" maxlength="2" id="minutos" readonly >
+                <label> : </label>
+                <input type="hor" maxlength="2" id="segundos" readonly >
+                <input type="submit" id = "reiniciar" class="boton1" name="reiniciar" value="Reanudar" 
+                onclick="inicio_crono()" />
+                <input type="submit" id = "pausa" class="boton1" name="pausa" value="Pausa" onclick="para_crono()"/>
+            </div>
+        </form>
+    </body>
+</html>
